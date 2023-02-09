@@ -111,7 +111,7 @@ ${data.test}
 
 If you have any futher questions, feel free to message me through my email or my github. Both of which are linked bellow
 
-[Github Profile](https://github.com/${data.github})
+[Github Profile](https://github.com/${data.github}) | 
 [My Email - ${data.email}](mailto:${data.email})
 `;
     fs.writeFile('README.md', readme, function (err) {
