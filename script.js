@@ -1,5 +1,6 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
+const renderLicenseBadge = require("./utils/generateMarkdown");
 
 var profile = new Promise(function (resolve, reject) {
     resolve(inquirer.prompt([
@@ -55,15 +56,22 @@ var profile = new Promise(function (resolve, reject) {
         },
         {
             type: "input",
-            name: "questions",
-            message: "Please provide any qestions for your project."
+            name: "github",
+            message: "Please provide the username for you github account."
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "Please provide the email you would like to be contacted at."
         },
     ])
     )
 });
 
 profile.then(function(data){
-    const readme = `${generateMarkdown(data)}
+    const readme = `# ${data.title}
+
+${renderLicenseBadge(data)}
     
 ## Description
 
@@ -101,7 +109,10 @@ ${data.test}
 
 ## Questions
 
-${data.questions}
+If you have any futher questions, feel free to message me through my email or my github. Both of which are linked bellow
+
+[Github Profile](https://github.com/${data.github})
+[My Email - ${data.email}](mailto:${data.email})
 `;
     fs.writeFile('README.md', readme, function (err) {
         if (err) {

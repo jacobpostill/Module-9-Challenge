@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 let button = ''
 
-function renderLicenseBadge(license) {
+function renderLicenseBadge(data) {
   if (data.license == 'Apache License 2.0') {
     button = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
   }
@@ -42,14 +42,13 @@ function renderLicenseBadge(license) {
   if (data.license == 'The Unlicense') {
     button = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)' 
   }
+  return button
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-  ${button}
+  renderLicenseBadge(data.license)
 
-`;
 }
 
 module.exports = generateMarkdown;

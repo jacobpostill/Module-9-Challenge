@@ -1,10 +1,10 @@
-# sadfg
+# asdf
 
-[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt) 
+undefined
     
 ## Description
 
-sadfg
+asdf
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ sadfg
 
 ## Installation
 
-asdgf
+asdf
 
 ## Usage 
 
@@ -26,11 +26,11 @@ asdf
 
 ## License
 
-Apache License 2.0
+This application is covered by the following license: Apache License 2.0.
 
 ## Contributing
 
-asdf
+sdaf
 
 ## Tests
 
@@ -38,4 +38,7 @@ asdf
 
 ## Questions
 
-asdf
+If you have any futher questions, feel free to message me through my email or my github. Both of which are linked bellow
+
+[Github Profile](https://github.com/sdf)
+[My Email - asdf](mailto:asdf)
