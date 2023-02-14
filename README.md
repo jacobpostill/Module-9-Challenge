@@ -6,6 +6,10 @@
 
 In this project you will be able to generate a professional looking README for your repo. It will include a Table of Contents, Installation, Usage, Liscense, Contriunting, Test, and Questions.
 
+[Walkthrough Video](https://drive.google.com/file/d/1hBM_wOOa4TwZ6mzizv2AVNeOoUvXE8JF/view)
+
+<img src="./Example.svg">
+
 ## Table of Contents
 
 - [Installation](#installation)
