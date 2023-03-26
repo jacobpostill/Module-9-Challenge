@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 let button = ''
-
+//This code is for generating the readme logo. It has a logo for all of the liscense github provides.
 function generateMarkdown(data) {
   if (data.license == 'Apache License 2.0') {
     button = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
