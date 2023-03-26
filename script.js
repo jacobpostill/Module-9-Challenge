@@ -2,6 +2,7 @@ var inquirer = require("inquirer");
 var fs = require("fs");
 const renderLicenseBadge = require("./utils/generateMarkdown");
 
+//This is a new Promise for the questions that need to be asked to create a readme
 var profile = new Promise(function (resolve, reject) {
     resolve(inquirer.prompt([
         {
@@ -68,6 +69,7 @@ var profile = new Promise(function (resolve, reject) {
     )
 });
 
+//This then takes all the answers to the questions and puts it into a readme file
 profile.then(function(data){
     const readme = `# ${data.title}
 
@@ -114,6 +116,7 @@ If you have any futher questions, feel free to message me through my email or my
 [Github Profile](https://github.com/${data.github}) | 
 [My Email - ${data.email}](mailto:${data.email})
 `;
+    //This is the code that will right the file and generate the readme. 
     fs.writeFile('README.md', readme, function (err) {
         if (err) {
             return console.log(err);
